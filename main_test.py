@@ -28,6 +28,5 @@ class TestApp(unittest.TestCase):
         response = self.client.get("/invalid-guid")
         self.assertEqual(response.status_code, 404)
 
-
-# if __name__ == "__main__":
+if __name__ == "__main__":
 #     unittest.main()
