@@ -1,7 +1,10 @@
 import unittest
 import json
 from fastapi.testclient import TestClient
-from main import app
+#from main import app
+from myapp import app  # where `app = FastAPI()` is defined
+
+
 
 
 class TestApp(unittest.TestCase):
@@ -26,5 +29,5 @@ class TestApp(unittest.TestCase):
         self.assertEqual(response.status_code, 404)
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()
