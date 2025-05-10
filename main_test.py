@@ -5,8 +5,6 @@ from fastapi.testclient import TestClient
 from myapp import app  # where `app = FastAPI()` is defined
 
 
-
-
 class TestApp(unittest.TestCase):
     def setUp(self):
         self.client = TestClient(app)
@@ -28,6 +26,6 @@ class TestApp(unittest.TestCase):
         response = self.client.get("/invalid-guid")
         self.assertEqual(response.status_code, 404)
 
-if __name__ == "__main__":
+    
     
     
