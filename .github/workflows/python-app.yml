@@ -14,9 +14,9 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    permissions:
+      checks: write
     steps:
     - name: Checkout python code
       uses: actions/checkout@v4
